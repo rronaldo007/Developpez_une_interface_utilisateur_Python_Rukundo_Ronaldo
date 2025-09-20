@@ -1,0 +1,100 @@
+@media (max-width: 1024px) {
+    .movies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-title {
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .featured-movie-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .featured-image {
+        align-self: center;
+    }
+
+    .featured-image img {
+        width: 160px;
+        height: 240px;
+    }
+
+    .featured-title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .featured-description {
+        text-align: left;
+    }
+
+    .movies-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .movie-card img {
+        height: 200px;
+    }
+
+    /* Modal responsive */
+    .modal-body {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .modal-right {
+        order: 1;
+        align-self: center;
+        margin-top: 15px;
+    }
+
+    .modal-left {
+        order: 0;
+    }
+
+    .modal-poster img {
+        width: 140px;
+        height: 210px;
+    }
+
+    .modal-content {
+        margin: 10px;
+        max-width: calc(100vw - 20px);
+        max-height: calc(100vh - 20px);
+    }
+
+    .modal-title {
+        font-size: 1.3rem;
+    }
+
+    .modal-metadata p,
+    .modal-directors p,
+    .modal-actors p,
+    .modal-description p {
+        font-size: 0.8rem;
+    }
+
+    .btn-see-more { display: block; }
+}

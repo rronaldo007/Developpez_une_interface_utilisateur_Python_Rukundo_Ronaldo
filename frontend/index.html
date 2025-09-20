@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustStreamIt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon"></div>
+                    <div class="logo-text">JustStreamIt</div>
+                </div>
+                <div class="header-title">Vidéos à la demande</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Hero Section - Meilleur film -->
+            <section class="hero-section">
+                <h1 class="section-title">Meilleur film</h1>
+                
+                <div class="loading" id="hero-loading">Chargement du meilleur film</div>
+                
+                <div class="featured-movie-card" id="featured-movie" style="display: none;">
+                    <div class="featured-image">
+                        <img id="featured-image" src="" alt="">
+                    </div>
+                    <div class="featured-info">
+                        <h2 class="featured-title" id="featured-title"></h2>
+                        <p class="featured-description" id="featured-description"></p>
+                        <button class="btn-details" id="btn-details">Détails</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Films les mieux notés -->
+            <section class="top-rated-section">
+                <h2 class="section-title">Films les mieux notés</h2>
+                
+                <div class="loading" id="top-rated-loading">Chargement des films</div>
+                
+                <div class="movies-grid-container" id="top-rated-container" style="display: none;">
+                    <div class="movies-grid" id="top-rated-movies"></div>
+                    <button class="btn-see-more" id="btn-see-more">Voir plus</button>
+                </div>
+            </section>
+
+            <!-- Mystery Category -->
+            <section class="mystery-section">
+                <h2 class="section-title">Mystery</h2>
+                
+                <div class="loading" id="mystery-loading">Chargement des films</div>
+                
+                <div class="movies-grid-container" id="mystery-container" style="display: none;">
+                    <div class="movies-grid" id="mystery-movies"></div>
+                    <button class="btn-see-more" id="mystery-see-more">Voir au-dessus</button>
+                </div>
+            </section>
+
+            <!-- Dynamic Category Section -->
+            <section class="dynamic-category-section">
+                <div class="category-selector">
+                    <h3>Autres:</h3>
+                    <select id="category-select" class="category-dropdown">
+                        <option value="">Chargement des catégories...</option>
+                    </select>
+                    <span class="category-selected-indicator" id="category-indicator">✓</span>
+                    <p class="category-description">Catégorie choisie dans le menu déroulant</p>
+                </div>
+                
+                <!-- Dynamic category content -->
+                <div class="dynamic-category-content" id="dynamic-category" style="display: none;">
+                    <h2 class="section-title" id="dynamic-title"></h2>
+                    
+                    <div class="loading" id="dynamic-loading">Chargement des films</div>
+                    
+                    <!-- Movies grid -->
+                    <div class="movies-grid-container" id="dynamic-container" style="display: none;">
+                        <div class="movies-grid" id="dynamic-movies"></div>
+                        <button class="btn-see-more" id="dynamic-see-more">Voir au-dessus</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="movie-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title"></h3>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <div class="modal-metadata">
+                        <p id="modal-year-genres"></p>
+                        <p id="modal-rating-duration"></p>
+                        <p id="modal-imdb-score"></p>
+                        <p id="modal-box-office"></p>
+                    </div>
+                    
+                    <div class="modal-directors">
+                        <p><strong>Réalisé par:</strong></p>
+                        <p id="modal-directors-list"></p>
+                    </div>
+                    
+                    <div class="modal-description">
+                        <p id="modal-description-text"></p>
+                    </div>
+                    
+                    <div class="modal-actors">
+                        <p><strong>Avec:</strong></p>
+                        <p id="modal-actors-list"></p>
+                    </div>
+
+                    <div class="modal-right">
+                        <div class="modal-poster">
+                            <img id="modal-poster-img" src="" alt="">
+                        </div>
+                    </div>
+                    
+                    <button class="modal-close-btn" id="modal-close-btn">Fermer</button>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
